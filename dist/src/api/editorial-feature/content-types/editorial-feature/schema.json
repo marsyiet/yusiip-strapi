@@ -1,0 +1,56 @@
+{
+    "kind": "collectionType",
+    "collectionName": "editorial_features",
+    "info": {
+        "singularName": "editorial-feature",
+        "pluralName": "editorial-features",
+        "displayName": "Editorial feature"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "cover": {
+            "type": "media",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "description": {
+            "type": "blocks",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "articles": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::article.article",
+            "mappedBy": "editorial_feature"
+        }
+    }
+}
