@@ -24,6 +24,24 @@
                 }
             }
         },
+        "une": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "default": false
+        },
+        "first": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "default": false
+        },
         "slug": {
             "type": "uid",
             "targetField": "title"
