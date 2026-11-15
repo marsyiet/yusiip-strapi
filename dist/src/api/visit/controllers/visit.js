@@ -1,7 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// Visites de l'ancien site : le total repart de là
-const TOTAL_OFFSET = 10805;
 // Un visiteur est "en ligne" s'il a donné signe de vie dans les 5 dernières minutes
 const ONLINE_WINDOW = 5 * 60 * 1000;
 const BOT = /bot|crawl|spider|slurp|preview|headless|lighthouse/i;
@@ -43,7 +41,7 @@ exports.default = ({ strapi }) => ({
             today: await sum(today),
             month: await sum(today.slice(0, 7)),
             year: await sum(today.slice(0, 4)),
-            total: TOTAL_OFFSET + (await sum()),
+            total: await sum(),
         };
     },
 });
