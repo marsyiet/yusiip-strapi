@@ -106,7 +106,8 @@
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "default": false
     }
   }
 }

@@ -571,7 +571,8 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         i18n: {
           localized: false;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     sub_theme: Schema.Attribute.Relation<
