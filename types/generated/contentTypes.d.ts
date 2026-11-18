@@ -538,7 +538,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
@@ -549,6 +549,13 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::editorial-feature.editorial-feature'
     >;
     first: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
+    interview: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
